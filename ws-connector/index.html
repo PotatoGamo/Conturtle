@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WebSocket Client</h1>
+        <div class="input-group">
+            <input type="text" id="serverUrl" placeholder="ws://example.com:port" />
+            <button onclick="connectWebSocket()">Connect</button>
+            <input type="text" id="clientName" placeholder="Name" />
+            <input type="text" id="sendTo" placeholder="Turtle Label" />
+
+        </div>
+        
+        <div id="status">Status: <span style="color: red;">Disconnected</span></div>
+        
+        <h2>Messages:</h2>
+        <textarea id="messages" readonly></textarea>
+    
+        <h2>Send a Message:</h2>
+        <div class="input-group">
+            <input type="text" id="messageInput" placeholder="Type your message here..." />
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="clearLogs()">Clear</button>
+        </div>
+        <h2>Controls</h2>
+        <div class="input-group">
+            <input type="number" id="slotNum" min="1" max="16" value="1"/><button onclick="selectSlot(valOf('slotNum'))">Select</button><button onclick="refuel()">Refuel</button><button onclick="sendMessage('turtle.digUp()')">^x</button>
+            <button onclick="sendMessage('turtle.down()')">-</button><button onclick="sendMessage('turtle.forward()')">^</button><button onclick="sendMessage('turtle.up()')">+</button><button onclick="sendMessage('turtle.dig()')">x</button>
+            <button onclick="sendMessage('turtle.turnLeft()')">&lt;</button><button onclick="sendMessage('turtle.back()')">v</button><button onclick="sendMessage('turtle.turnRight()')">&gt;</button><button onclick="sendMessage('turtle.digDown()')">vx</button>
+        </div>        
+        
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
