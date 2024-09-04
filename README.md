@@ -1,3 +1,6 @@
 # ws-turtle-connector
 
-```npm -i ws```
+```npm install ws```
+Or run the ```installdependencies.py```
+
+run ```startserver.py```
