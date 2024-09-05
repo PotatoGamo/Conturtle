@@ -51,7 +51,7 @@ The web client is accessible by simply opening the `index.html` file in your web
 To install the Turtle program, run the following command in your terminal:
 
 ```bash
-wget https://raw.githubusercontent.com/PotatoGamo/ws-turtle-connector/main/turtroller.lua
+wget https://raw.githubusercontent.com/PotatoGamo/Conturtle/main/turtroller.lua
 ```
 
 **Note:** It is recommended to rename the downloaded script to `startup.lua` so that the turtle connects on startup:
