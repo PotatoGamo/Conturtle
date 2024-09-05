@@ -1,29 +1,70 @@
-
 # TURTROLER
 
-a CC-TWEAKED turtle controller, server and turtle script
+**TURTROLER** is a CC-TWEAKED turtle controller that includes a WebSocket server and a turtle script, designed for seamless integration and easy usage.
 
+## Table of Contents
 
+- [Installation](#installation)
+- [Server](#server)
+- [Web Client](#web-client)
+- [Turtle Script](#turtle-script)
+- [Usage](#usage)
 
+## Installation
+
+Before using TURTROLER, ensure you have Node.js and npm installed. 
+
+### Dependencies
+
+To install the required package for the WebSocket server, you can choose one of the following methods:
+
+1. **Using npm:**
+   ```bash
+   npm install ws
+   ```
+
+2. **Using the included Python script:**
+   ```bash
+   python installdependencies.py
+   ```
 
 ## Server
 
-To deploy the websocket server run 
+To deploy the WebSocket server, you can use one of the following methods:
 
-```bash
-  node ./server/index.js
-```
-or simple run the included `startserver.py`
+1. **Using Node.js:**
+   ```bash
+   node ./server/index.js
+   ```
 
-The ws package is needed for this server to run. You can either run
-```bash
-  npm install ws
-```
-or simply run the included `installdependencies.py`
+2. **Using the included Python script:**
+   ```bash
+   python startserver.py
+   ```
+
 ## Web Client
 
-The webclient can be accessed by simply opening the html file
-## Turtle
+The web client is accessible by simply opening the `index.html` file in your web browser. Just navigate to the file location and double-click it to open.
 
-The turtle program can be installed by running ```wget https://raw.githubusercontent.com/PotatoGamo/ws-turtle-connector/main/turtroller.lua``` 
-I recomend renaming this to startup.lua
+## Turtle Script
+
+To install the Turtle program, run the following command in your terminal:
+
+```bash
+wget https://raw.githubusercontent.com/PotatoGamo/ws-turtle-connector/main/turtroller.lua
+```
+
+**Note:** It is recommended to rename the downloaded script to `startup.lua` so that the turtle connects on startup:
+
+```bash
+rename turtroller.lua startup.lua
+```
+
+## Usage
+
+Once everything is set up:
+- Start the WebSocket server.
+- Open the web client in your browser.
+- Ensure the Turtle program is running to start controlling your turtle.
+
+For further assistance or contributions, feel free to open an issue or submit a pull request on the repository!
